@@ -1,11 +1,11 @@
-title: "Affiliates"
-email: wowthemesnet@gmail.com
-timezone: UTC
-baseurl: "/affiliates-jekyll-theme"
+title: "Nirooba Blog"
+email: nirooba98@gmail.com
+timezone: EST
+baseurl: ""
 permalink: "/:title/"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-author: Sal
+author: Nirooba
 paginate: 30
 disqus: 'demowebsite'
 locale: en_us
@@ -20,32 +20,31 @@ kramdown:
 sass:
   sass_dir: _sass
   style: :compressed
-ganalytics: UA-113961478-1
+ganalytics: 
 
 # Authors
 authors:
-  sal:
-    name: Sal
-    display_name: Sal
+  Nirooba:
+    name: Nirooba
+    display_name:  Nirooba
     avatar: 'assets/images/sal.png'
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/category/jekyll-themes/
-    twitter: https://twitter.com/wowthemesnet
-    description: "Author of Affiliates, a template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-  john:
-    name: John
-    display_name: John
+    email: nirooba98@gmail.com
+    web: https://nirooba.com
+    description: ""
+  Shivasurya:
+    name: Shivasurya
+    display_name: Shivasurya
     avatar: 'assets/images/john.png'
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/category/jekyll-themes/
-    twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Affiliates theme demo, a Jekyll template compatible with Github pages."
+    email: s.shivasurya@gmail.com
+    web: https://shivasurya.me
+    twitter: https://twitter.com/sshivasurya
+    description: ""
 
 # Social
 social:
-  instagram: https://www.instagram.com/bootstrapstarter/
-  facebook: https://www.facebook.com/bootstrapstartercom-346329609045284
-  twitter: https://twitter.com/bstartercom
+  github: https://github.com/nirooba98
+  linkedin: https://www.linkedin.com/in/pon-nirooba/
+  website: https://nirooba.com/
 
 # Plugins
 plugins: 
