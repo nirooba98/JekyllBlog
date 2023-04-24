@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_us"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_us" /><updated>2023-04-24T13:39:40-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nirooba Blog</title><author><name>Nirooba</name></author><entry><title type="html">Mobile app Permissions: A Double-Edged Sword for Your Privacy</title><link href="http://localhost:4000/android-security/" rel="alternate" type="text/html" title="Mobile app Permissions: A Double-Edged Sword for Your Privacy" /><published>2023-04-20T00:00:00-05:00</published><updated>2023-04-20T00:00:00-05:00</updated><id>http://localhost:4000/android-security</id><content type="html" xml:base="http://localhost:4000/android-security/"><![CDATA[<p>Mobile App permissions are the way apps ask for access to your device’s features and data. They can be useful for enhancing your app experience, but they can also be dangerous if you grant them to malicious or untrustworthy apps. In this blog post, we will explain how permissions work, how they can compromise your privacy, and how you can secure your privacy by managing them wisely.</p>
+
+<h2 id="your-mobile-is-your-personal-world-in-your-pocket">Your Mobile is your Personal World in Your Pocket.</h2>
+
+<p><img src="/assets/images/mobileWorld.jpg" alt="mobileWorldImage" /></p>
+
+<p>A mobile phone today, is more than just a device. It’s a personal world, a kingdom, where you store your memories, contacts, personal messages, private photos, videos, apps, and more. It’s a reflection of who you are and what you do. But what if someone else gets access to that kingdom? What if someone can see your private information, steal your identity, or misuse your data? That’s why it is important to protect your private information and prevent unauthorized access to your mobile phone.</p>
+
+<p>Have you ever wondered why some mobile apps ask for your permission to access certain features or data on your device? For example, a camera app may ask for your permission to use the camera and the microphone, or a map app may ask for your permission to access your location. These are called mobile app permissions, and they are designed to protect your privacy and security.</p>
+
+<h2 id="how-to-control-your-mobile-app-permissions-and-why-it-matters">How to Control Your Mobile App Permissions and Why It Matters?</h2>
+
+<p>Mobile app permissions are a way of letting you know what an app can do with your device and your personal information. They also give you control over what an app can access and use. You can choose to grant or deny permissions to an app, depending on how much you trust the app and how comfortable you are with sharing your data.</p>
+
+<p>The purpose of mobile app permissions is to prevent malicious apps from accessing sensitive data or features without your knowledge or consent. For example, a malicious app may try to access your contacts, messages, photos, or microphone to steal your information or spy on you. By requiring permissions, the app has to ask you first before it can access anything.</p>
+
+<p>However, not all permissions are necessary or justified for an app to function properly. Some apps may ask for more permissions than they need, or use them for purposes that are not related to their core functionality. For example, a flashlight app may ask for your permission to access your location, which is not relevant for its purpose. This may indicate that the app is collecting your data for advertising or other purposes that you may not agree with.</p>
+
+<p>Therefore, it is important to be careful and selective when granting permissions to mobile apps. You should always read the permission requests carefully and understand why an app needs them. You should also check the app’s privacy policy and reviews to see how it handles your data and what it does with it. You should only grant permissions that are essential for the app’s functionality and that you are comfortable with sharing. You can also change or revoke permissions at any time in your device’s settings.</p>
+
+<p>Mobile app permissions are a key aspect of mobile security and privacy. They help you protect your device and your personal information from malicious or intrusive apps. They also give you control over what an app can do with your data and features. By being aware and cautious of mobile app permissions, you can enjoy using mobile apps without compromising your privacy and security.</p>
+
+<h2 id="types-of-mobile-app-permissions">Types of Mobile App Permissions</h2>
+
+<h3 id="contact-permissions">Contact Permissions</h3>
+
+<p>Contact permissions allows an app to read, write, or modify the your contacts data, such as names, phone numbers, and email addresses. Contact permissions are also required for some features like sharing content with contacts or inviting contacts to join the app.</p>
+
+<p>Contact permissions are essential for many apps that want to provide a better user experience and functionality but, they are also considered as dangerous permissions, which means that they can affect the your privacy or security. Therefore, it is important to check the genunity of the app and understand why the app needs these permissions and how they will benefit the you.</p>
+
+<p>If you are a developer, developing a mobile app that needs to access the user’s contacts, you need to request the appropriate permissions from the user.
+To request contact permissions, you need to declare them in your app’s manifest file using the <code>&lt;uses-permission&gt;</code> element. For example, to request the permission to read contacts, you need to add this line in your manifest file:</p>
+
+<pre><code class="language-xml">&lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
+</code></pre>
+
+<p>Similarly, to request the permission to write or modify contacts, you need to add this line:</p>
+
+<pre><code class="language-xml">&lt;uses-permission android:name="android.permission.WRITE_CONTACTS" /&gt;
+</code></pre>
+
+<h3 id="location-permissions">Location permissions</h3>
+
+<p>Location permissions are one of the most common and important features of mobile app development. They allow apps to access the user’s location data for various purposes, such as providing personalized recommendations, navigation, weather updates, and more. However, location permissions also raise privacy and security concerns, so developers need to be careful and transparent about how they use them.</p>
+
+<p>One way to implement location permissions in Android apps is by using the ACCESS_FINE_LOCATION and ACCESS_COARSE_LOCATION permissions in the AndroidManifest.xml file. These permissions allow apps to access the user’s precise and approximate location, respectively. For example, the following code snippet shows how to declare these permissions in the manifest file:</p>
+
+<pre><code class="language-xml">&lt;manifest ... &gt;
+&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
+...
+&lt;/manifest&gt;
+</code></pre>
+
+<h3 id="storage-permissions">Storage Permissions</h3>
+
+<p>Storage permissions allows an app to read and write files on the external or internal storage of your device. 
+As a developer, developing a mobile app that needs to access a device’s storage, you need to declare storage permissions in your manifest file, you need to add the following lines inside the <code>&lt;manifest&gt;</code> tag:</p>
+
+<pre><code class="language-xml">&lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&gt;
+&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+</code></pre>
+<p>However, declaring these permissions is not enough to access the storage. You also need to request them at runtime from the user. This is because storage permissions are considered dangerous permissions, which means they can affect the user’s privacy or security. To request storage permissions at runtime, you need to use the requestPermissions() method of the ActivityCompat class.</p>
+
+<p>###S Camera and Microphone Permissions</p>
+
+<p>Camera and microphone permissions are important because they allow an app to use features that can enhance the user experience, such as taking photos, recording videos, making voice calls, or using speech recognition. However, these features also involve sensitive data that users may not want to share with every app. Therefore, Android and iOS have a permission system that lets users control which apps can access their camera and microphone.</p>
+
+<p>The permission system works differently on Android and iOS. On Android, you need to declare the permissions you need in your app’s manifest file using XML code. For example, to request camera and microphone permissions, you need to add these lines:</p>
+
+<pre><code class="language-xml">&lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+&lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
+</code></pre>
+
+<p>On iOS, you also need to declare the permissions you need in your app’s info.plist file using XML code. For example, to request camera and microphone permissions, you need to add these keys:</p>
+
+<pre><code class="language-xml">&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;
+&lt;string&gt;This app needs access to your camera.&lt;/string&gt;
+&lt;key&gt;NSMicrophoneUsageDescription&lt;/key&gt;
+&lt;string&gt;This app needs access to your microphone.&lt;/string&gt;
+</code></pre>
+
+<h2 id="review-your-app-permissions-before-installing">Review Your App Permissions Before Installing</h2>
+
+<p>When you download a new mobile app, you need to pay attention to the permissions it asks for. If not, you might be compromising your privacy and security without realizing it.  Some permissions are necessary for the app to function properly, but others are not. By reviewing the permissions before installing an app, you can make an informed decision about whether you trust the app or not.</p>
+
+<p>When you install an app on your smartphone, you may be asked to grant certain permissions to access your data or device features, but did you know that some third party libraries can bypass the mobile app permission system and access your sensitive data without your consent? These libraries are often embedded in popular apps that you download from the app store, and they can collect information such as your location, contacts, browsing history, and more. This poses a serious threat to your privacy and security, as well as violating the app store policies. To protect yourself from these malicious libraries, you should always check the permissions that an app requests before installing it, and use a trusted security app to scan your device regularly such a as DEVAA.</p>
+
+<h2 id="devaa">DEVAA</h2>
+
+<p>DEVAA (Detecting exploitable vulnerabilities in Android applications) is a mobile security app with which you can scan all your mobile applications regularly to find any vulnerability or malicious app that could pose a threat to your privacy and identity.</p>
+
+<p><em>DEVAA coming soon…</em></p>]]></content><author><name>Nirooba</name></author><category term="blog" /><category term="security" /><summary type="html"><![CDATA[Mobile App permissions are the way apps ask for access to your device’s features and data. They can be useful for enhancing your app experience, but they can also be dangerous if you grant them to malicious or untrustworthy apps. In this blog post, we will explain how permissions work, how they can compromise your privacy, and how you can secure your privacy by managing them wisely.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/securityBlog-1.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/securityBlog-1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Install and Set-up Python</title><link href="http://localhost:4000/install-setup-python/" rel="alternate" type="text/html" title="Install and Set-up Python" /><published>2023-04-14T00:00:00-05:00</published><updated>2023-04-14T00:00:00-05:00</updated><id>http://localhost:4000/install-setup-python</id><content type="html" xml:base="http://localhost:4000/install-setup-python/"><![CDATA[<p>Hello and welcome to my first blog post where I will introduce you to Python, one of the most popular and versatile programming languages in the world.</p>
+
+<p>Python is widely used for various applications such as</p>
+<ul>
+  <li>web development</li>
+  <li>data science</li>
+  <li>machine learning</li>
+  <li>automation and more.</li>
+</ul>
+
+<p>In this post, I will show you how to install Python on your computer, how to choose an IDE (Integrated Development Environment) that suits your needs, and how to write and run your first Python program using the terminal or shell.</p>
+
+<h2 id="how-to-install-python">How to install Python</h2>
+
+<p>Python is an interpreted language, which means that you need a Python interpreter to execute your code. There are different versions of Python available, but the most recent ones are Python 2 and Python 3. Python 2 is no longer supported since 2020, so it is recommended to use Python 3 for your projects.</p>
+
+<p>To install Python 3 on your computer, you can go to the official <a href="https://www.python.org/downloads/">Python website</a> and download the installer for your operating system (Windows, Linux/UNIX, macOS, or other).</p>
+
+<p><img src="/assets/images/PythonDownload.png" alt="python" /></p>
+
+<h2 id="how-to-choose-an-ide-for-python">How to choose an IDE for Python</h2>
+
+<p>An IDE is a software application that provides a set of tools for writing, editing, debugging, and running code. An IDE can make your coding experience more productive and enjoyable by offering features such as syntax highlighting, code completion, error checking, debugging tools, project management, and more.</p>
+
+<p>There are many IDEs available for Python development, but some of the most popular ones are:</p>
+<ul>
+  <li>
+    <p><strong>PyCharm:</strong> A powerful and feature-rich IDE developed by JetBrains. It offers a smart code editor, a graphical debugger, a built-in terminal, a test runner, a code refactoring tool, and integration with many popular frameworks and libraries. PyCharm has a free community edition and a paid professional edition with more features.</p>
+  </li>
+  <li>
+    <p><strong>Visual Studio Code:</strong> A lightweight and extensible code editor developed by Microsoft. It supports many programming languages including Python with the help of extensions. It has a simple and intuitive user interface, a fast and responsive editor, a built-in terminal, a debugger, a source control integration, and a rich marketplace of extensions.</p>
+  </li>
+  <li>
+    <p><strong>Jupyter Notebook:</strong> A web-based interactive environment for data science and machine learning. It allows you to create and share documents that contain live code, equations, visualizations, and narrative text. It is ideal for exploring data, prototyping models, and presenting results.</p>
+  </li>
+</ul>
+
+<p>You can choose an IDE based on your personal preference, your project requirements, and your budget. You can also try different IDEs and see which one works best for you.</p>
+
+<h2 id="how-to-use-a-terminal-or-shell-to-code-in-python">How to use a terminal or shell to code in Python</h2>
+
+<p>If you prefer a minimalist approach or want to learn the basics of Python without using an IDE, you can use your terminal or shell to write and run Python code.</p>
+
+<p>To start coding in Python using your terminal or shell, follow these steps:</p>
+<ul>
+  <li>
+    <p>Open your terminal or shell application on your computer. You can use any terminal emulator such as Command Prompt or PowerShell on Windows, Terminal on macOS, or Linux/UNIX.</p>
+  </li>
+  <li>
+    <p>Type <code>python</code> or <code>python3</code> (depending on your installation) and press Enter. This will launch the Python interactive interpreter where you can type and execute Python commands line by line.</p>
+  </li>
+  <li>
+    <p>To write a multi-line program in the interpreter, use triple quotes (<code>"""</code>) at the beginning and end of your code block. For example:</p>
+  </li>
+</ul>
+
+<pre><code>    &gt;&gt;&gt; """
+    ... print("Hello world!")
+    ... x = 10
+    ... y = 20
+    ... print(x + y)
+    ... """
+    '\\nprint("Hello world!")\\nx = 10\\ny = 20\\nprint(x + y)\\n'
+    &gt;&gt;&gt; exec(_)
+    Hello world!
+    30 
+
+
+    - To exit the interpreter, type `exit()` or press Ctrl+Z 
+</code></pre>
+
+<p><img src="/assets/images/pyterminal1.png" alt="python" /></p>
+
+<p><img src="/assets/images/pyterminal2.png" alt="python" /></p>]]></content><author><name>Nirooba</name></author><category term="python" /><category term="blog" /><summary type="html"><![CDATA[Hello and welcome to my first blog post where I will introduce you to Python, one of the most popular and versatile programming languages in the world.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/install.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/install.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Powerful things you can do with the Markdown editor</title><link href="http://localhost:4000/powerful-things-markdown-editor/" rel="alternate" type="text/html" title="Powerful things you can do with the Markdown editor" /><published>2020-01-12T00:00:00-05:00</published><updated>2020-01-12T00:00:00-05:00</updated><id>http://localhost:4000/powerful-things-markdown-editor</id><content type="html" xml:base="http://localhost:4000/powerful-things-markdown-editor/"><![CDATA[<p>There are lots of powerful things you can do with the Markdown editor</p>
+
+<p>If you’ve gotten pretty comfortable with writing in Markdown, then you may enjoy some more advanced tips about the types of things you can do with Markdown!</p>
+
+<p>As with the last post about the editor, you’ll want to be actually editing this post as you read it so that you can see all the Markdown code we’re using.</p>
+
+<h2 id="special-formatting">Special formatting</h2>
+
+<p>As well as bold and italics, you can also use some other special formatting in Markdown when the need arises, for example:</p>
+
+<ul>
+  <li><del>strike through</del></li>
+  <li>==highlight==</li>
+  <li>*escaped characters*</li>
+</ul>
+
+<h2 id="writing-code-blocks">Writing code blocks</h2>
+
+<p>There are two types of code elements which can be inserted in Markdown, the first is inline, and the other is block. Inline code is formatted by wrapping any word or words in back-ticks, <code>like this</code>. Larger snippets of code can be displayed across multiple lines using triple back ticks:</p>
+
+<pre><code>.my-link {
+    text-decoration: underline;
+}
+</code></pre>
+
+<p>If you want to get really fancy, you can even add syntax highlighting using Rouge.</p>
+
+<p><img src="/assets/images/PythonDownload.png" alt="walking" /></p>
+
+<h2 id="reference-lists">Reference lists</h2>
+
+<p>The quick brown jumped over the lazy.</p>
+
+<p>Another way to insert links in markdown is using reference lists. You might want to use this style of linking to cite reference material in a Wikipedia-style. All of the links are listed at the end of the document, so you can maintain full separation between content and its source or reference.</p>
+
+<h2 id="full-html">Full HTML</h2>
+
+<p>Perhaps the best part of Markdown is that you’re never limited to just Markdown. You can write HTML directly in the Markdown editor and it will just work as HTML usually does. No limits! Here’s a standard YouTube embed code as an example:</p>
+
+<p><iframe style="width:100%;" height="315" src="https://www.youtube.com/embed/Cniqsc9QfDo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe></p>]]></content><author><name>sal</name></author><category term="Jekyll" /><category term="tutorial" /><summary type="html"><![CDATA[There are lots of powerful things you can do with the Markdown editor]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/4.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/4.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Red Riding Hood</title><link href="http://localhost:4000/red-riding/" rel="alternate" type="text/html" title="Red Riding Hood" /><published>2020-01-12T00:00:00-05:00</published><updated>2020-01-12T00:00:00-05:00</updated><id>http://localhost:4000/red-riding</id><content type="html" xml:base="http://localhost:4000/red-riding/"><![CDATA[<p>The first mass-produced book to deviate from a rectilinear format, at least in the United States, is thought to be this 1863 edition of Red Riding Hood, cut into the shape of the protagonist herself with the troublesome wolf curled at her feet. Produced by the Boston-based publisher Louis Prang, this is the first in their “Doll Series”, a set of five “die-cut” books, known also as shape books — the other titles being Robinson Crusoe, Goody Two-Shoes (also written by Red Riding Hood author Lydia Very), Cinderella, and King Winter.</p>
+
+<p>An 1868 Prang catalogue would later claim that such “books in the shape of a regular paper Doll… originated with us”.</p>
+
+<blockquote>
+  <p>It would seem the claim could also extend to die cut books in general, as we can’t find anything sooner, but do let us know in the comments if you have further light to shed on this! Such books are, of course, still popular in children’s publishing today, though the die cutting is not now limited to mere outlines, as evidenced in a beautiful 2014 version of the same Little Red Riding Hood story.</p>
+</blockquote>
+
+<p>The die cut has also been employed in the non-juvenile sphere as well, a recent example being Jonathan Safran Foer’s ambitious Tree of Codes.</p>
+
+<p>As for this particular rendition of Charles Perrault’s classic tale, the text and design is by Lydia Very (1823-1901), sister of Transcendentalist poet Jones Very. The gruesome ending of the original — which sees Little Red Riding Hood being gobbled up as well as her grandmother — is avoided here, the gore giving way to the less bloody aims of the morality tale, and the lesson that one should not disobey one’s mother.</p>]]></content><author><name>sal</name></author><category term="Jekyll" /><category term="tutorial" /><summary type="html"><![CDATA[The first mass-produced book to deviate from a rectilinear format, at least in the United States, is thought to be this 1863 edition of Red Riding Hood, cut into the shape of the protagonist herself with the troublesome wolf curled at her feet. Produced by the Boston-based publisher Louis Prang, this is the first in their “Doll Series”, a set of five “die-cut” books, known also as shape books — the other titles being Robinson Crusoe, Goody Two-Shoes (also written by Red Riding Hood author Lydia Very), Cinderella, and King Winter.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/3.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/3.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Markdown Example</title><link href="http://localhost:4000/markup-example/" rel="alternate" type="text/html" title="Markdown Example" /><published>2020-01-11T00:00:00-05:00</published><updated>2020-01-11T00:00:00-05:00</updated><id>http://localhost:4000/markup-example</id><content type="html" xml:base="http://localhost:4000/markup-example/"><![CDATA[<p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated. Something.</p>
+
+<p>To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention <code>YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>john</name></author><category term="Jekyll" /><category term="tutorial" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. Something.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/6.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/6.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is Intelligence Enough</title><link href="http://localhost:4000/is-intelligence-enough/" rel="alternate" type="text/html" title="Is Intelligence Enough" /><published>2019-01-12T00:00:00-05:00</published><updated>2019-01-12T00:00:00-05:00</updated><id>http://localhost:4000/is-intelligence-enough</id><content type="html" xml:base="http://localhost:4000/is-intelligence-enough/"><![CDATA[<p>Education must also train one for quick, resolute and effective thinking. To think incisively and to think for one’s self is very difficult.</p>
+
+<blockquote>
+  <p>We are prone to let our mental life become invaded by legions of half truths, prejudices, and propaganda. At this point, I often wonder whether or not education is fulfilling its purpose. A great majority of the so-called educated people do not think logically and scientifically.</p>
+</blockquote>
+
+<p>Even the press, the classroom, the platform, and the pulpit in many instances do not give us objective and unbiased truths. To save man from the morass of propaganda, in my opinion, is one of the chief aims of education. Education must enable one to sift and weigh evidence, to discern the true from the false, the real from the unreal, and the facts from the fiction.</p>
+
+<p>The function of education, therefore, is to teach one to think intensively and to think critically. But education which stops with efficiency may prove the greatest menace to society. The most dangerous criminal may be the man gifted with reason, but with no morals.</p>
+
+<p>The late Eugene Talmadge, in my opinion, possessed one of the better minds of Georgia, or even America. Moreover, he wore the Phi Beta Kappa key. By all measuring rods, Mr. Talmadge could think critically and intensively; yet he contends that I am an inferior being. Are those the types of men we call educated?</p>
+
+<p>We must remember that intelligence is not enough. Intelligence plus character–that is the goal of true education. The complete education gives one not only power of concentration, but worthy objectives upon which to concentrate. The broad education will, therefore, transmit to one not only the accumulated knowledge of the race but also the accumulated experience of social living.</p>]]></content><author><name>sal</name></author><category term="Jekyll" /><category term="tutorial" /><summary type="html"><![CDATA[Education must also train one for quick, resolute and effective thinking. To think incisively and to think for one’s self is very difficult.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/5.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/5.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Tree of Codes</title><link href="http://localhost:4000/tree-of-codes/" rel="alternate" type="text/html" title="Tree of Codes" /><published>2018-01-12T00:00:00-05:00</published><updated>2018-01-12T00:00:00-05:00</updated><id>http://localhost:4000/tree-of-codes</id><content type="html" xml:base="http://localhost:4000/tree-of-codes/"><![CDATA[<p>The first mass-produced book to deviate from a rectilinear format, at least in the United States, is thought to be this 1863 edition of Red Riding Hood, cut into the shape of the protagonist herself with the troublesome wolf curled at her feet. Produced by the Boston-based publisher Louis Prang, this is the first in their “Doll Series”, a set of five “die-cut” books, known also as shape books — the other titles being Robinson Crusoe, Goody Two-Shoes (also written by Red Riding Hood author Lydia Very), Cinderella, and King Winter.</p>
+
+<p>As for this particular rendition of Charles Perrault’s classic tale, the text and design is by Lydia Very (1823-1901), sister of Transcendentalist poet Jones Very. The gruesome ending of the original — which sees Little Red Riding Hood being gobbled up as well as her grandmother — is avoided here, the gore giving way to the less bloody aims of the morality tale, and the lesson that one should not disobey one’s mother.</p>
+
+<blockquote>
+  <p>It would seem the claim could also extend to die cut books in general, as we can’t find anything sooner, but do let us know in the comments if you have further light to shed on this! Such books are, of course, still popular in children’s publishing today, though the die cutting is not now limited to mere outlines, as evidenced in a beautiful 2014 version of the same Little Red Riding Hood story.</p>
+</blockquote>
+
+<p>An 1868 Prang catalogue would later claim that such “books in the shape of a regular paper Doll… originated with us”.</p>
+
+<p>The die cut has also been employed in the non-juvenile sphere as well, a recent example being Jonathan Safran Foer’s ambitious Tree of Codes.</p>]]></content><author><name>sal</name></author><category term="Jekyll" /><category term="tutorial" /><summary type="html"><![CDATA[The first mass-produced book to deviate from a rectilinear format, at least in the United States, is thought to be this 1863 edition of Red Riding Hood, cut into the shape of the protagonist herself with the troublesome wolf curled at her feet. Produced by the Boston-based publisher Louis Prang, this is the first in their “Doll Series”, a set of five “die-cut” books, known also as shape books — the other titles being Robinson Crusoe, Goody Two-Shoes (also written by Red Riding Hood author Lydia Very), Cinderella, and King Winter.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/2.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
