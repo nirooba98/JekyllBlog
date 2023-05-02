@@ -4,7 +4,7 @@ timezone: EST
 baseurl: ""
 permalink: "/:title/"
 logo: 'assets/images/newlogo.png'
-favicon: 'assets/images/favicon.ico'
+favicon: 'assets/images/newlogo.ico'
 author: Nirooba
 paginate: 30
 disqus: 'demowebsite'
