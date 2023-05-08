@@ -22,12 +22,14 @@ Mad Libs is a word game where one player prompts another player to fill in the b
 
 2. Use the input() function to ask the player to enter the words for each blank. You can assign each input to a variable with a descriptive name. For example:
 
-         adjective1 = input("Enter an adjective: ")
+```
+    adjective1 = input("Enter an adjective: ")
     noun1 = input("Enter a noun: ")
     verb_past = input("Enter a verb, past tense: ")
     adverb = input("Enter an adverb: ")
     adjective2 = input("Enter another adjective: ")
     noun2 = input("Enter another noun: ")
+```
 
 3. Use the print() function to display the final story with the words inserted in the blanks. You can use string concatenation (+) or string formatting (f-strings) to combine the variables and the text. 
 
