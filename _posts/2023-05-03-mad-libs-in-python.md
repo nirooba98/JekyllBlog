@@ -3,7 +3,7 @@ layout: post
 title:  "Mad Libs in Python"
 author: Nirooba
 categories: [ Jekyll, tutorial ]
-image: assets/images/2.jpg
+image: assets/images/mad_libs.jpg
 draft: true
 ---
 # How to Make Your Own Mad Libs Game with Python
