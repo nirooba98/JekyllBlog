@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Install and Set-up Python"
+author: Nirooba
 categories: [ python, blog]
 image: assets/images/install.jpg
 ---
